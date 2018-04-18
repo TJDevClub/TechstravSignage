@@ -1,2 +1,2 @@
 # TechstravSignage
-Signage for Techstrav
+Signage for Techstravaganza
