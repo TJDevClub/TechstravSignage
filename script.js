@@ -1,3 +1,5 @@
+console.log('Ready');
+
 var config = {
     apiKey: 'AIzaSyD2OpXee9TD17oKFORJJGPq51b5ZzFBFL8',
     authDomain: 'techstrav-signage.firebaseapp.com',
@@ -7,6 +9,19 @@ var config = {
     messagingSenderId: '492385124811'
 };
 firebase.initializeApp(config);
+
+
+function card(announcement) {
+    if (!public) {
+        return;
+    }
+    let template = document.querySelector('.announcement-card-template');
+    let html = template.replace('%%%TITLE%%%', announcement.title);
+    html = html.replace('%%%CONTENT%%%', announcement.content);
+    let elem = document.createElement('div');
+    elem.innerHTML = html;
+    document.querySelector('.list').append(elem);
+}
 
 // Get a reference to the database service
 var database = firebase.database();
