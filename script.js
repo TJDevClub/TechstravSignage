@@ -10,10 +10,9 @@ firebase.initializeApp(config);
 
 // Get a reference to the database service
 var database = firebase.database();
-var ref = database.ref();
+var ref = database.ref("testAnnouncements");
 ref.on("value", function (snapshot) {
     events = snapshot.val();
-    events = events["testAnnouncements"];
     for (var event in events) {
         console.log(events);
     }
