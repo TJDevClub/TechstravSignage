@@ -12,10 +12,10 @@ firebase.initializeApp(config);
 
 
 function card(announcement) {
-    if (!public) {
+    if (!announcement.public) {
         return;
     }
-    let template = document.querySelector('.announcement-card-template');
+    let template = document.querySelector('.announcement-card-template').innerText;
     let html = template.replace('%%%TITLE%%%', announcement.title);
     html = html.replace('%%%CONTENT%%%', announcement.content);
     let elem = document.createElement('div');
@@ -29,12 +29,13 @@ var ref = database.ref('testAnnouncements');
 ref.on('value', function (snapshot) {
     events = snapshot.val();
     for (var i = 0; i < events.length; i++) {
-        event = events[i]
+        event = events[i];
         if (event.title) {
-            console.log(event.title)
+            console.log(event.title);
         }
         if (event.content){
-            console.log(event.content)
+            console.log(event.content);
         }
+        card(event);
     }
 });
