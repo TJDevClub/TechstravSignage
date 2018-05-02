@@ -28,6 +28,7 @@ var database = firebase.database();
 var ref = database.ref('testAnnouncements');
 ref.on('value', function (snapshot) {
     events = snapshot.val();
+    document.querySelector('.list').innerHTML = '';
     for (var i = 0; i < events.length; i++) {
         event = events[i];
         if (event.title) {
