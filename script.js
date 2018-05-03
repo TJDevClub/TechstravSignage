@@ -17,7 +17,7 @@ function card(announcement) {
         return;
     }
     let template = document.querySelector(".announcement-card-template").innerText;
-    let html = template.replace("%%%TITLE%%%" announcement.title);
+    let html = template.replace("%%%TITLE%%%", announcement.title);
     html = html.replace("%%%CONTENT%%%", announcement.content);
     let elem = document.createElement("div");
     elem.innerHTML = html;
