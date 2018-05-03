@@ -49,7 +49,7 @@ ref.on('value', function (snapshot) {
       }
       first--;
     } while(!event.public);
-    for (var i = first; i > 0; i--) {
+    for (var i = first; i >= 0; i--) {
         event = events[i];
         if (event.title) {
             console.log(event.title);
