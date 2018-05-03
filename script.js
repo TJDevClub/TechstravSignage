@@ -24,13 +24,32 @@ function card(announcement) {
     document.querySelector('.list').append(elem);
 }
 
+function featured(announcement) {
+  let template = document.querySelector('.featured-template').innerText;
+  let html = template.replace('%%%TITLE%%%', announcement.title);
+  html = html.replace('%%%CONTENT%%%', announcement.content);
+  let elem = document.createElement('div');
+  elem.innerHTML = html;
+  elem.classList.add('featured');
+  document.querySelector('.featured').replaceWith(elem);
+}
+
 // Get a reference to the database service
 var database = firebase.database();
 var ref = database.ref('testAnnouncements');
 ref.on('value', function (snapshot) {
     events = snapshot.val();
     document.querySelector('.list').innerHTML = '';
-    for (var i = 0; i < events.length; i++) {
+    var first = events.length-1;
+    do
+    {
+      if ((event = events[first]).public)
+      {
+        featured(events[first]);
+      }
+      first--;
+    } while(!event.public);
+    for (var i = first; i > 0; i--) {
         event = events[i];
         if (event.title) {
             console.log(event.title);
