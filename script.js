@@ -6,7 +6,7 @@ var config = {
     databaseURL: 'https://techstrav-signage.firebaseio.com',
     projectId: 'techstrav-signage',
     storageBucket: 'techstrav-signage.appspot.com',
-    messagingSenderId: '492385124811';
+    messagingSenderId: '492385124811'
 };
 firebase.initializeApp(config);
 
