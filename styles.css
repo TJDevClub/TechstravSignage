@@ -10,6 +10,11 @@ html, body {
     margin-bottom: 12px;
 }
 
+.announcement .fa-exclamation-circle {
+    color: #c62828;
+    padding-right: 15px;
+}
+
 .featured, .list {
     width: 50vw;
     height: 100vh;
@@ -24,7 +29,7 @@ html, body {
     -moz-border-radius: 3px;
     border-radius: 3px;
     border: 1px solid #d8d8d8;
-    padding: 0px 10px 10px 10px;
+    padding: 5px 15px 15px 15px;
     margin: 20px 15px;
     overflow-x: auto;
     color: #1e1e1e;
