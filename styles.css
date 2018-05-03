@@ -14,13 +14,17 @@ html, body {
     width: 50vw;
     height: 100vh;
     display: inline-block;
-
     position: absolute;
     top: 0;
 }
 
 .featured {
     background-color: #CED0FD;
+}
+
+.featured h1 {
+  text-align: center;
+  font-size: 42px;
 }
 
 .list {
