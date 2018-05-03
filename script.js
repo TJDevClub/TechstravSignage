@@ -1,4 +1,4 @@
-console.log("Ready");
+console.log('Ready');
 
 var config = {
     apiKey: 'AIzaSyD2OpXee9TD17oKFORJJGPq51b5ZzFBFL8',
