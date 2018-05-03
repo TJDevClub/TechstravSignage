@@ -26,6 +26,10 @@ function card(announcement) {
     html = html.replace('%%%CONTENT%%%', announcement.content);
     let elem = document.createElement('div');
     elem.innerHTML = html;
+    if (announcement.urgent)
+    {
+      elem.classList.add('urgent');
+    }
     document.querySelector('.list').append(elem);
 }
 

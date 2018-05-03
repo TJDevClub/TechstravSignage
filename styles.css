@@ -5,9 +5,13 @@ html, body {
 }
 
 .announcement .title {
-    font-size: 36px;
+    font-size: 50px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.announcement .content {
+    font-size: 30px;
 }
 
 .announcement .fa-exclamation-circle {
@@ -16,7 +20,6 @@ html, body {
 }
 
 .featured, .list {
-    width: 50vw;
     height: 100vh;
     display: inline-block;
     position: absolute;
@@ -38,24 +41,55 @@ html, body {
 
 .featured {
     background-color: #CED0FD;
+    width: 45vw;
 }
 
 .featured h1 {
+    margin: 100px;
     text-align: center;
-    font-size: 42px;
+    font-size: 100px;
     padding-top: 10px;
+    font-weight: bold;
 }
 
 .featured div {
     text-align: center;
+    font-size: 60px;
 }
 
 .list {
     right: 0;
     overflow-y: scroll;
-    background-color: lightgray;
+    background-color: #EEEEEE;
+    width: 55vw;
 }
 
 .list::-webkit-scrollbar {
   display: none;
+}
+
+.urgent .announcement {
+  border: 1px solid #FF2300;
+}
+
+@media only screen and (max-width: 768px) {
+  .featured {
+    width: 100vw;
+    height: 30vw;
+    position: fixed;
+    top: 0;
+  }
+  .list {
+    position: absolute;
+    top: 30vw;
+    width: 100vw;
+    height: 60vw;
+  }
+  .featured h1 {
+    margin: 20px;
+    font-size: 50px;
+  }
+  .featured div {
+    font-size: 40px;
+  }
 }
