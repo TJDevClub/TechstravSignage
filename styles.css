@@ -20,11 +20,11 @@ html, body {
 }
 
 .announcement {
-    border: 1px solid lightgray;
-    margin: 10px;
+    border: 1px solid #DDDDDD;
+    margin: 15px;
     padding: 25px;
     border-radius: 5px;
-    box-shadow: 4px 4px 5px #888888;
+    background-color: #F7F7F7;
 }
 
 .featured {
@@ -42,4 +42,10 @@ html, body {
 
 .list {
     right: 0;
+    overflow-y: scroll;
+    background-color: lightgray;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
 }
