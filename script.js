@@ -17,6 +17,11 @@ function card(announcement) {
         return;
     }
     let template = document.querySelector('.announcement-card-template').innerText;
+    let urgentIndicator = "<i class=\"fas fa-exclamation-circle\"></i>"
+    if (announcement.urgent) {
+        announcement.title = urgentIndicator + announcement.title;
+    }
+    console.log(template)
     let html = template.replace('%%%TITLE%%%', announcement.title);
     html = html.replace('%%%CONTENT%%%', announcement.content);
     let elem = document.createElement('div');
@@ -25,13 +30,13 @@ function card(announcement) {
 }
 
 function featured(announcement) {
-  let template = document.querySelector('.featured-template').innerText;
-  let html = template.replace('%%%TITLE%%%', announcement.title);
-  html = html.replace('%%%CONTENT%%%', announcement.content);
-  let elem = document.createElement('div');
-  elem.innerHTML = html;
-  elem.classList.add('featured');
-  document.querySelector('.featured').replaceWith(elem);
+    let template = document.querySelector('.featured-template').innerText;
+    let html = template.replace('%%%TITLE%%%', announcement.title);
+    html = html.replace('%%%CONTENT%%%', announcement.content);
+    let elem = document.createElement('div');
+    elem.innerHTML = html;
+    elem.classList.add('featured');
+    document.querySelector('.featured').replaceWith(elem);
 }
 
 // Get a reference to the database service
@@ -43,11 +48,11 @@ ref.on('value', function (snapshot) {
     var first = events.length-1;
     do
     {
-      if ((event = events[first]).public)
-      {
-        featured(events[first]);
-      }
-      first--;
+        if ((event = events[first]).public)
+        {
+            featured(events[first]);
+        }
+        first--;
     } while(!event.public);
     for (var i = first; i >= 0; i--) {
         event = events[i];

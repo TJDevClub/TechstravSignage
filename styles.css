@@ -4,11 +4,15 @@ html, body {
     font-family: 'Open Sans', 'Comic Sans MS'
 }
 
-
 .announcement .title {
     font-size: 36px;
     margin-top: 12px;
     margin-bottom: 12px;
+}
+
+.announcement .fa-exclamation-circle {
+    color: #c62828;
+    padding-right: 15px;
 }
 
 .featured, .list {
@@ -20,11 +24,16 @@ html, body {
 }
 
 .announcement {
-    border: 1px solid #DDDDDD;
-    margin: 15px;
-    padding: 25px;
-    border-radius: 5px;
-    background-color: #F7F7F7;
+    background-color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    padding: 5px 15px 15px 15px;
+    margin: 20px 15px;
+    overflow-x: auto;
+    color: #1e1e1e;
+    box-shadow: 0px 0px 2px .5px #ccc;
 }
 
 .featured {
@@ -32,12 +41,13 @@ html, body {
 }
 
 .featured h1 {
-  text-align: center;
-  font-size: 42px;
+    text-align: center;
+    font-size: 42px;
+    padding-top: 10px;
 }
 
 .featured div {
-  text-align: center;
+    text-align: center;
 }
 
 .list {
