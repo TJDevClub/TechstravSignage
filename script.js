@@ -57,7 +57,7 @@ ref.on('value', function (snapshot) {
             featured(events[first]);
         }
         first--;
-    } while(!event.public);
+    } while(!event.public &&; first >= 0)
     for (var i = first; i >= 0; i--) {
         event = events[i];
         if (event.title) {
