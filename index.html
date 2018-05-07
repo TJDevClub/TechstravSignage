@@ -1,18 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Techstrav Signage</title>
-        <link rel="stylesheet" href="./styles.css" type="text/css" media="screen" title="no title" charset="utf-8">
+        <link rel="stylesheet" href="./styles.css" type="text/css" media="screen" title="no title">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.11/css/all.css" integrity="sha384-p2jx59pefphTFIpeqCcISO9MdVfIm4pNnsL08A6v5vaQc4owkQqxMV8kg4Yvhaw/" crossorigin="anonymous">
     </head>
     <body>
-        <div class="featured">
-        </div>
+          <script type="text/template" class="featured-template">
+                <h1 class="featured-title">
+                    %%%TITLE%%%
+                </h1>
+                <div class="featured-content">
+                  %%%CONTENT%%%
+                </div>
+          </script>
+          <div class="featured">
+          </div>
         <div class="list">
         </div>
 
-        <script type="text/template" class="announcement-card-template" charset="utf-8">
+        <script type="text/template" class="announcement-card-template">
         <div class="announcement">
             <h1 class="title">
             %%%TITLE%%%
@@ -24,6 +33,6 @@
         </script>
 
         <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-        <script charset="utf-8" src="./script.js"></script>
+        <script src="./script.js"></script>
     </body>
 </html>

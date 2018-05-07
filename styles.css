@@ -1,28 +1,95 @@
 html, body {
     margin: 0;
     padding: 0;
-
     font-family: 'Open Sans', 'Comic Sans MS'
 }
 
-
 .announcement .title {
-    font-size: 36px;
+    font-size: 50px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.announcement .content {
+    font-size: 30px;
+}
+
+.announcement .fa-exclamation-circle {
+    color: #c62828;
+    padding-right: 15px;
 }
 
 .featured, .list {
-    width: 50vw;
     height: 100vh;
     display: inline-block;
-
     position: absolute;
     top: 0;
 }
 
+.announcement {
+    background-color: white;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #d8d8d8;
+    padding: 5px 15px 15px 15px;
+    margin: 20px 15px;
+    overflow-x: auto;
+    color: #1e1e1e;
+    box-shadow: 0px 0px 2px .5px #ccc;
+}
+
 .featured {
     background-color: #CED0FD;
+    width: 45vw;
+}
+
+.featured h1 {
+    margin: 100px;
+    text-align: center;
+    font-size: 100px;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+.featured div {
+    text-align: center;
+    font-size: 60px;
 }
 
 .list {
     right: 0;
+    overflow-y: scroll;
+    background-color: #EEEEEE;
+    width: 55vw;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.urgent .announcement {
+  border: 1px solid #FF2300;
+}
+
+@media only screen and (max-width: 768px) {
+  .featured {
+    width: 100vw;
+    height: 30vw;
+    position: fixed;
+    top: 0;
+  }
+  .list {
+    position: absolute;
+    top: 30vw;
+    width: 100vw;
+    height: 60vw;
+  }
+  .featured h1 {
+    margin: 20px;
+    font-size: 50px;
+  }
+  .featured div {
+    font-size: 40px;
+  }
 }
